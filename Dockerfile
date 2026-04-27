@@ -16,6 +16,8 @@ WORKDIR /root
 # Copy the Pre-built binary file from the previous stage
 COPY --from=builder /build/job-runner ./
 
+COPY ./Piquant3.2.17 /build/Piquant
+
 RUN wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem -O global-bundle.pem
 RUN chmod +x ./job-runner
 
