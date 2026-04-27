@@ -10,7 +10,7 @@ RUN cd /build && GOOS=linux GOARCH=amd64 go build -o ./job-runner .
 
 FROM python:3.13-alpine
 
-RUN apk --no-cache add ca-certificates libc6-compat wget lua5.3
+RUN apk --no-cache add ca-certificates libc6-compat wget lua5.3 luarocks
 WORKDIR /root
 
 # Copy the Pre-built binary file from the previous stage
