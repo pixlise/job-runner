@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Unit Test
-        run: GOOS=linux GOARCH=amd64 go test ./...
+        run: cd runner && GOOS=linux GOARCH=amd64 go test ./...
         env:
           AWS_DEFAULT_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
