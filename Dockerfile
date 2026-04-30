@@ -10,6 +10,8 @@ RUN cd /build && GOOS=linux GOARCH=amd64 go build -o ./job-runner .
 
 FROM python:3.13-alpine
 
+# Didn't originally include build tools but eventually needed them due to luarocks compiling stuff with gcc
+# so this may as well be the only container. Kept the separated builder above for now though.
 RUN apk --no-cache add build-base ca-certificates libc6-compat wget lua5.3 lua5.3-dev luarocks
 WORKDIR /root
 

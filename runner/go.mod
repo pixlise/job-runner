@@ -2,7 +2,7 @@ module github.com/pixlise/job-runner
 
 go 1.24.5
 
-require github.com/pixlise/core/v4 v4.65.0
+require github.com/pixlise/core/v4 v4.68.1
 
 require (
 	github.com/aws/aws-lambda-go v1.36.0 // indirect
