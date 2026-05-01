@@ -158,12 +158,7 @@ func RunJob(noop bool) error {
 
 	pythonPath := ""
 	if strings.Contains(cfg.Command, "python") {
-		jobLog.Infof("Setting up python virtual env...")
-		err = setupPythonVEnv()
-		if err != nil {
-			return err
-		}
-
+		jobLog.Infof("Using python virtual env...")
 		// It worked, so set our python path!
 		pythonPath, err = os.Getwd()
 		if err == nil {
