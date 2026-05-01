@@ -11,11 +11,16 @@ func installPythonLibs(pythonPath string) error {
 	f, err := os.Stat("requirements.txt")
 	if err == nil && !f.IsDir() && f.Name() == "requirements.txt" {
 		// Run pip
-		out, err := runCommand(filepath.Join(pythonPath, "pip"), []string{"install", "-r", "requirements.txt"})
+		pipPath := filepath.Join(pythonPath, "pip")
+		fmt.Printf("Running %v to install requirements.txt...\n", pipPath)
+		out, err := runCommand(pipPath, []string{"install", "-r", "requirements.txt"})
 		if err != nil {
 			fmt.Printf("Failed to install python libraries:\n%v\n", string(out))
 			return err
 		}
+		fmt.Println("  ...Success")
+	} else {
+		fmt.Println("requirements.txt not found")
 	}
 
 	// No requirements.txt found or it worked... no errors!
