@@ -166,16 +166,18 @@ func RunJob(noop bool) error {
 		}
 	}
 
-	jobLog.Infof("Installing required libraries...")
+	jobLog.Infof("Checking for required libraries...")
 	commandToRun := cfg.Command
 
-	if strings.Contains(cfg.Command, "python") {
+	if testMode || strings.Contains(cfg.Command, "python") {
+		jobLog.Infof("Installing required python libraries...")
 		err = installPythonLibs(pythonPath)
 
 		// Modify the command!
 		commandToRun = filepath.Join(pythonPath, cfg.Command)
 	}
-	if strings.Contains(cfg.Command, "lua") {
+	if testMode || strings.Contains(cfg.Command, "lua") {
+		jobLog.Infof("Installing required lua libraries...")
 		err = installLuaLibs()
 	}
 
