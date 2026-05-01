@@ -18,12 +18,14 @@ WORKDIR /run
 # Copy the Pre-built binary file from the previous stage
 COPY --from=builder /build/job-runner /run
 
+# Copy PIQUANT here
 COPY ./Piquant3.2.17 /run/Piquant
+
+# Set up a python venv so it's ready. We may not be running python all the time but at least we're not doing this each time
+RUN python3.13 -m venv .
 
 RUN wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem -O global-bundle.pem
 RUN chmod +x ./job-runner
-
-# RUN luarocks-5.3 install luafilesystem
 
 # Command to run the executable
 ENTRYPOINT ["./job-runner"]
