@@ -140,6 +140,7 @@ func Example_jobrunner_RunJob_DownloadUploadOK() {
 	fmt.Printf("Getwd: %v\n", err)
 
 	tmpdir := filepath.Join(os.TempDir(), "test-download-tmp")
+	fmt.Printf("Clear temp dir: %v\n", os.RemoveAll(tmpdir))
 	err = os.MkdirAll(tmpdir, dirperm)
 	fmt.Printf("MkdirAll: %v\n", err)
 	err = os.Chdir(tmpdir)
@@ -179,6 +180,7 @@ func Example_jobrunner_RunJob_DownloadUploadOK() {
 	// GetSession: <nil>
 	// GetS3: <nil>
 	// Getwd: <nil>
+	// Clear temp dir: <nil>
 	// MkdirAll: <nil>
 	// Chdir: <nil>
 	// Write S3 input.csv: <nil>
@@ -200,10 +202,7 @@ func Example_jobrunner_RunJob_DownloadUploadOK() {
 	// INFO:  Wrote file: second.csv
 	// INFO: Checking for required libraries...
 	// INFO: Installing required python libraries...
-	// Run Command: pip [install,-r,requirements.txt]
 	// INFO: Installing required lua libraries...
-	// Executing: luarocks-5.3 install lfs
-	// Run Command: luarocks-5.3 [install,lfs]
 	// INFO: Running job...
 	// DEBUG: exec.Command starting "dostuff", args: []
 	// Run Command: dostuff []
@@ -225,6 +224,7 @@ func Example_jobrunner_RunJob_SeedAndDownloadOK() {
 	fmt.Printf("Getwd: %v\n", err)
 
 	tmpdir := filepath.Join(os.TempDir(), "test-download-tmp")
+	fmt.Printf("Clear temp dir: %v\n", os.RemoveAll(tmpdir))
 	err = os.MkdirAll(tmpdir, dirperm)
 	fmt.Printf("MkdirAll: %v\n", err)
 	err = os.Chdir(tmpdir)
@@ -266,6 +266,7 @@ func Example_jobrunner_RunJob_SeedAndDownloadOK() {
 	// GetSession: <nil>
 	// GetS3: <nil>
 	// Getwd: <nil>
+	// Clear temp dir: <nil>
 	// MkdirAll: <nil>
 	// Chdir: <nil>
 	// CopyToBucket: <nil>
