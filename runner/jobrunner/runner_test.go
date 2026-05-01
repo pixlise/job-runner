@@ -177,7 +177,8 @@ func Example_jobrunner_RunJob_DownloadUploadOK() {
 	// GetSession: <nil>
 	// GetS3: <nil>
 	// Getwd: <nil>
-	// Chdir: chdir /home/peter/code/PIXLISE/job-runner/runner/jobrunner/test-files/download: no such file or directory
+	// MkdirAll: <nil>
+	// Chdir: <nil>
 	// Write S3 input.csv: <nil>
 	// Write S3 input2.csv: <nil>
 	// Write local data.txt: <nil>
