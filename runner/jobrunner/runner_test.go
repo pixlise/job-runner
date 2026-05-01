@@ -136,7 +136,11 @@ func Example_jobrunner_RunJob_DownloadUploadOK() {
 
 	origPath, err := os.Getwd()
 	fmt.Printf("Getwd: %v\n", err)
-	err = os.Chdir(filepath.Join(origPath, "test-files", "download"))
+
+	tmpdir := filepath.Join(os.TempDir(), "test-download-tmp")
+	err = os.MkdirAll(tmpdir, dirperm)
+	fmt.Printf("MkdirAll: %v\n", err)
+	err = os.Chdir(tmpdir)
 	fmt.Printf("Chdir: %v\n", err)
 
 	fmt.Printf("Write S3 input.csv: %v\n", remoteFS.WriteObject("test-piquant", "RunnerTest/input.csv", []byte("hello")))
