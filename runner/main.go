@@ -21,7 +21,7 @@ func main() {
 		log.Fatalf("Failed to read %v: %v. Error %v", jobrunner.EnvNodeIndexName, nodeIdxStr, err)
 	}
 
-	fmt.Println("PIXLISE Job Runner Starting, job path: s3://%v/%v, node index: %v...", bucket, jobPath, nodeIdx)
+	fmt.Printf("PIXLISE Job Runner Starting, job path: s3://%v/%v, node index: %v...\n", bucket, jobPath, nodeIdx)
 
 	// Get a session for the bucket region
 	sess, err := awsutil.GetSession()
