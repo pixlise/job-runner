@@ -36,7 +36,7 @@ func main() {
 
 	remoteFS := fileaccess.MakeS3Access(s3svc)
 
-	err = jobrunner.RunJob(bucket, jobPath, uint(nodeIdx), remoteFS)
+	err = jobrunner.RunJob(bucket, jobPath, uint(nodeIdx), remoteFS, nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
