@@ -120,6 +120,8 @@ github.com/pixlise/core/v4 v4.70.1 h1:ma4YWQOL3ht2UHFy51X8SwEID5PRDqy2NoO2kSON6S
 github.com/pixlise/core/v4 v4.70.1/go.mod h1:iaI+9nUILw9O8cD5ZweZcGrrQo6FlJ3YE38Eff4JjQ4=
 github.com/pixlise/core/v4 v4.75.2 h1:MZ83eUQ5VSJSE/EpCpuFzjxkUG7AsJ2kcGpbe0ufxnY=
 github.com/pixlise/core/v4 v4.75.2/go.mod h1:/k7QSpKAdSOYJIn6dFso8o8tiGUlEYv7PaSlnpJh69o=
+github.com/pixlise/core/v4 v4.79.2 h1:GGHBwlghtcDy8DZJDvd0qj2/RDXZNMj/N9f+FiBOBOk=
+github.com/pixlise/core/v4 v4.79.2/go.mod h1:/k7QSpKAdSOYJIn6dFso8o8tiGUlEYv7PaSlnpJh69o=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
