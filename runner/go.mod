@@ -2,7 +2,7 @@ module github.com/pixlise/job-runner
 
 go 1.24.5
 
-require github.com/pixlise/core/v4 v4.79.1
+require github.com/pixlise/core/v4 v4.79.2
 
 require (
 	github.com/auth0-community/go-auth0 v1.0.0 // indirect

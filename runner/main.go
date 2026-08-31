@@ -7,6 +7,7 @@ import (
 	"strconv"
 
 	"github.com/pixlise/core/v4/api/job/jobrunner"
+	"github.com/pixlise/core/v4/api/services"
 	"github.com/pixlise/core/v4/core/awsutil"
 	"github.com/pixlise/core/v4/core/fileaccess"
 )
@@ -22,6 +23,7 @@ func main() {
 	}
 
 	fmt.Println("PIXLISE Job Runner Starting...")
+	fmt.Printf("Using core version: %v\n", services.ApiVersion)
 	fmt.Printf("Job path: s3://%v/%v, node index: %v...\n", bucket, jobPath, nodeIdx)
 
 	// Get a session for the bucket region
