@@ -5,6 +5,7 @@ go 1.24.5
 require github.com/pixlise/core/v4 v4.79.6
 
 require (
+	github.com/PuerkitoBio/rehttp v1.1.0 // indirect
 	github.com/auth0-community/go-auth0 v1.0.0 // indirect
 	github.com/aws/aws-lambda-go v1.36.0 // indirect
 	github.com/aws/aws-sdk-go v1.53.11 // indirect
@@ -71,6 +72,7 @@ require (
 	golang.org/x/time v0.3.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
+	gopkg.in/auth0.v4 v4.7.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
